@@ -1,0 +1,16 @@
+name: wine_prediction
+on: [push]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    container:
+    steps:
+      - uses: actions/checkout@v3
+      - uses: iterative/setup-cml@v1
+      - name: Train model
+        run: |
+        # your ML workflow goes here
+          pip install -r requirements.txt
+          python wine_prediction.ipynb
+          echo "MODEL METRICS"
+          cat metrics.txt
