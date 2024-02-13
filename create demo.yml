@@ -13,4 +13,4 @@ jobs:
           pip install -r requirements.txt
           python wine_prediction.ipynb
           echo "MODEL METRICS"
-          cat metrics.txt
+          
